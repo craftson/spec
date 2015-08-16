@@ -8,7 +8,7 @@ As by the name, plugin.json is a [JSON](http://json.org/) file. It is located in
 
 ### Required Keys
 
-- `"name"` - String. The name of the mod or plugin. Must be an alphanumeric string including dashes and underscores, without spaces. In other words, must match the regex `/[a-zA-Z0-9-_]*/`.
+- `"name"` - String. The name of the mod or plugin. Must be an alphanumeric string including dashes and underscores, without spaces. In other words, must match the regex `/[a-zA-Z0-9-_]+/`.
 
 - `"owner"` - String. The name of the owner of the mod or plugin. This can be the sole developer of the mod or plugin, the name of the organization that maintains the mod or plugin. This field must be semi-unique. It is recommended to use a group id or domain name owned by the maintainer(s) of the mod or plugin, like `"org.example"`.
 
