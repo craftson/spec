@@ -1,7 +1,7 @@
 # packson (package.json) spec
 
 ## Rationale
-Every Minecraft modding platform has designed some sort of way for packages (plugins or mods) to bundle information when they are distributed. Forge has mcmod.info, Sponge has the `@Plugin` annotation, and Bukkit and Spigot have plugin.yml. While the individual systems are different, they all rely on distributing packages in JARs with some sort of description file. This file is consumed by the modding platforms themselves, as well as other systems that deal with the distribution, storage, or management of plugins and mods. package.json is a platform-neutral description file for Minecraft packages that unifies these efforts. It is designed to be simple to read, simple to create, and simple to consume.
+Every Minecraft modding platform has designed some sort of way for packages (plugins or mods) to bundle information when they are distributed. Forge has mcmod.info, Sponge has the `@Plugin` annotation, and Bukkit and Spigot have plugin.yml. While the individual systems are different, they all rely on distributing packages in JARs with some sort of description file. This file is consumed by the modding platforms themselves, as well as other systems that deal with the distribution, storage, or management of packages. package.json is a platform-neutral description file for Minecraft packages that unifies these efforts. It is designed to be simple to read, simple to create, and simple to consume.
 
 ## Specification
 As by the name, package.json is a [JSON](http://json.org/) file. It is located in the root of a package JAR file. The root of the file is a JSON object, with several keys and values. Some of these are required and some of these are not.
@@ -35,14 +35,14 @@ As by the name, package.json is a [JSON](http://json.org/) file. It is located i
   - `"homepage"` - The homepage of the package.
   - `"issues"` - Where to report issues.
 
-- `"dependencies"` - Array of arrays. Describes the dependencies on other mods or packages. Each element in the dependencies array describes a different package dependency. Each individual dependency is an array of strings, containing the owner, name, and version, in that order. Absence of this key implies that the package has no dependencies.
+- `"dependencies"` - Array of arrays. Describes the dependencies on other packages. Each element in the dependencies array describes a different package dependency. Each individual dependency is an array of strings, containing the owner, name, and version, in that order. Absence of this key implies that the package has no dependencies.
 
 #### Example
 
 ```js
 {
   "description": "An example package.json file that shows how package.json is used.",
-  "keywords": ["example", "package.json", "plugson", "usage"],
+  "keywords": ["example", "package.json", "packson", "usage"],
   "links": {
     "homepage": "https://example.com/my-package",
     "issues": "https://github.com/example-owner/my-package/issues"
