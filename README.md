@@ -46,9 +46,6 @@ build number.
 on length; however, the length of the description should be reasonable (within 500 characters).
 Helps people to discover the package.
 
-- `"keywords"` - Array of strings. A list of keywords describing the package. Also aids people in
-discovering the package. -- _This may be unecessary bloat._
-
 - `"links"` - Object. Describes relevant links to the project. Each value of the array is a URI
 describing the location of a specific link. There are several recommended links to associate with
 the package:
@@ -66,7 +63,6 @@ implies that the package has no dependencies.
 ```js
 {
   "description": "An example package.json file that shows how package.json is used.",
-  "keywords": ["example", "package.json", "packson", "usage"],
   "links": {
     "homepage": "https://example.com/my-package",
     "issues": "https://github.com/example-owner/my-package/issues"
