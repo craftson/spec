@@ -15,7 +15,7 @@ As by the name, package.json is a [JSON](http://json.org/) file. It is located i
 package JAR file. The root of the file is a JSON object, with several keys and values. Some of these
 are required and some of these are not.
 
-### Required Keys
+### Required Fields
 
 - `"name"` - String. The name of the package. Must be an alphanumeric string including dashes and
 underscores, without spaces. In other words, must match the regex `/[a-zA-Z0-9-_]+/`.
@@ -40,7 +40,7 @@ build number.
 }
 ```
 
-### Optional Keys
+### Optional Fields
 
 - `"description"` - String. A human-readable description of the package. There are no restrictions
 on length; however, the length of the description should be reasonable (within 500 characters).
