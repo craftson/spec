@@ -86,7 +86,7 @@ implies that the package has no dependencies.
       "central": "https://central.maven.org"
     },
     "dependencies": [
-      ["org.example", "ExampleAPI", "1.0.0-SNAPSHOT"],
+      ["org.example", "ExampleAPI", "1.0.0-SNAPSHOT"]
     ]
   }
 }
