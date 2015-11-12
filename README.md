@@ -17,12 +17,11 @@ are required and some of these are not.
 
 ### Required Fields
 
-- `"name"` - String. The name of the package. Must be an alphanumeric string including dashes and
+- `"id"` - String. The name of the package. Must be an alphanumeric string including dashes and
 underscores, without spaces. In other words, must match the regex `/[a-zA-Z0-9-_]+/`.
 
-- `"owner"` - String. The name of the owner of the package. This can be the sole developer of the
-package, the name of the organization that maintains the package. This field must be semi-unique. It
-is recommended to use a group id or domain name owned by the maintainer(s) of the package, like
+- `"group"` - String. The semi-unique identifier that identifies the group behind the package. It
+is recommended to use a domain name owned by the maintainer(s) of the package, like
 `"org.example"`.
 
 - `"version"` - String. A human-readable version descriptor of the package. It is _highly_
