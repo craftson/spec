@@ -51,9 +51,9 @@ characters.
 on length; however, the length of the description should be reasonable, or within 500 characters.
 Helps people to discover the package.
 
-- `"links"` - Object. Describes relevant links to the project. Each value of the array is a URI
-describing the location of a specific link. There are several recommended links to associate with
-the package:
+- `"links"` - Object with keys as strings. Describes relevant links to the project. Each value of
+the object is a URI describing the location of a specific link. There are several recommended links
+to associate with the package:
 
   - `"homepage"` - The homepage of the package.
   - `"issues"` - Where to report issues.
