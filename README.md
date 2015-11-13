@@ -17,8 +17,9 @@ are required and some of these are not.
 
 ### Required Fields
 
-- `"id"` - String. The name of the package. Must be an alphanumeric string including dashes and
-underscores, without spaces. In other words, must match the regex `/[a-zA-Z0-9-_]+/`.
+- `"id"` - String. The machine-readable name of the package. Must be an alphanumeric string
+including dashes and underscores, without spaces. In other words, must match the regex
+`/[a-zA-Z0-9-_]+/`.
 
 - `"group"` - String. The semi-unique identifier that identifies the group behind the package. It
 is recommended to use a domain name owned by the maintainer(s) of the package, like
@@ -41,8 +42,12 @@ build number.
 
 ### Optional Fields
 
+- `"title"` - String. A short, human-readable name. How the project is referred to in speech or
+text. There are no restrictions on length; but it is recommended to keep the title under 50
+characters.
+
 - `"description"` - String. A human-readable description of the package. There are no restrictions
-on length; however, the length of the description should be reasonable (within 500 characters).
+on length; however, the length of the description should be reasonable, or within 500 characters.
 Helps people to discover the package.
 
 - `"links"` - Object. Describes relevant links to the project. Each value of the array is a URI
@@ -51,42 +56,33 @@ the package:
 
   - `"homepage"` - The homepage of the package.
   - `"issues"` - Where to report issues.
+  - `"sources"` - The location of the sources of the project. It is recommended to refer a source
+  control repository, such as a git repository.
 
 - `"dependencies"` - Array of arrays. Describes the dependencies on other packages. Each element in
 the dependencies array describes a different package dependency. Each individual dependency is an
-array of strings, containing the owner, name, and version, in that order. Absence of this key
-implies that the package has no dependencies.
+array of strings, containing the group id, and version of that dependency, in that order. Absence of
+the `"dependencies"` key implies that the package has no dependencies.
+
+- `"license"` - String. The license that files in the package are under. Must be either a license
+identifier from https://spdx.org/licenses/ or a link to a webpage that describes the license, like
+the license file.
 
 #### Example
 
 ```js
 {
+  "title": "My Package",
   "description": "An example craft.json file that shows how craft.json is used.",
   "links": {
     "homepage": "https://example.com/my-package",
-    "issues": "https://github.com/example-owner/my-package/issues"
+    "issues": "https://github.com/example-owner/my-package/issues",
+    "sources": "https://github.com/example-owner/my-package"
   },
   "dependencies": [
     ["org.other-example", "other-package", "0.5.6"],
     ["com.example-three", "yet-another-package", "2.4.0"]
-  ]
-}
-```
-
-### The 'maven' key
-
-#### Example
-
-```js
-{
-  "maven": {
-    "repositories": {
-      "example-repo": "https://example-repo.com/repo",
-      "central": "https://central.maven.org"
-    },
-    "dependencies": [
-      ["org.example", "ExampleAPI", "1.0.0-SNAPSHOT"]
-    ]
-  }
+  ],
+  "license": "MIT"
 }
 ```
