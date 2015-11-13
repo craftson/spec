@@ -11,11 +11,12 @@ Minecraft packages that unifies these efforts. It is designed to be simple to re
 create, and simple to consume.
 
 ## Specification
-As by the name, craft.json is a [JSON](http://json.org/) file. It is located in the root of a
-package JAR file. The root of the file is a JSON object, with several keys and values. Some of these
-are required and some of these are not.
+As by the name, craft.json is a [JSON](http://json.org/) file. It is located in the root of an
+archive file, most commonly JAR or ZIP. The root of the file is often a JSON object, called the
+_package object_. The package object describes the package within the archive file. Several fields
+in the package object format are required, and most are optional.
 
-### Required Fields
+### Required Fields in the Package Object
 
 - `"id"` - String. The machine-readable name of the package. Must be an alphanumeric string
 including dashes and underscores, without spaces. In other words, must match the regex
@@ -34,13 +35,13 @@ build number.
 
 ```js
 {
-  "name": "my-package",
-  "owner": "com.example",
+  "id": "my-package",
+  "group": "com.example",
   "version": "2.3.0"
 }
 ```
 
-### Optional Fields
+### Optional Fields in the Package Object
 
 - `"title"` - String. A short, human-readable name. How the project is referred to in speech or
 text. There are no restrictions on length; but it is recommended to keep the title under 50
@@ -85,4 +86,29 @@ the license file.
   ],
   "license": "MIT"
 }
+```
+
+### Specifying Multiple Packages
+
+Specify multiple packages by using an array at the root of the craft.json file. Each object inside
+the array must be a package object, and follow the package object format. There is no limit to the
+number of package objects that may be within the array.
+
+#### Example
+
+```js
+[
+  {
+    "id": "package-one",
+    "group": "com.example",
+    "version": "2.3.0",
+    "license": "MIT"
+  },
+  {
+    "id": "package-other",
+    "group": "org.my-group",
+    "version": "0.0.1",
+    "description": "Another package"
+  }
+]
 ```
