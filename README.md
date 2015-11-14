@@ -73,7 +73,7 @@ string in the array describes a different author, and must adhere to the _person
 
 - `"contributors"` - Array of strings. Describes contributors who helped in the creation or
 maintenance of the package, but are not considered to be its authors or maintainers. Each string in
-the array describes a different author, and must adhere to the person/entity format.
+the array describes a different contributor, and must adhere to the person/entity format.
 
 - `"license"` - String. The license that files in the package are under. Must be either a license
 identifier from https://spdx.org/licenses/ or a link to a webpage that describes the license, like
