@@ -64,16 +64,35 @@ to associate with the package:
 the dependencies array describes a different package dependency. Absence of the `"dependencies"` key
 implies that the package has no dependencies.
 
-  Each individual dependency is an
-  array of strings, containing the group, id, and version of that dependency, in that order. The
-  version of a dependency may be excluded, indicating that any version of that dependency is
-  compatible with the package.
+  Each individual dependency is an array of strings, containing the group, id, and version of that
+  dependency, in that order. The version of a dependency may be excluded, indicating that any
+  version of that dependency is compatible with the package.
 
-- `"authors"` - Array of strings.
+- `"authors"` - Array of strings. Describes the direct authors or maintainers of the package. Each
+string in the array describes a different author, and must adhere to the _person/entity format_.
+
+- `"contributors"` - Array of strings. Describes contributors who helped in the creation or
+maintenance of the package, but are not considered to be its authors or maintainers. Each string in
+the array describes a different author, and must adhere to the person/entity format.
 
 - `"license"` - String. The license that files in the package are under. Must be either a license
 identifier from https://spdx.org/licenses/ or a link to a webpage that describes the license, like
 the license file.
+
+#### Person/Entity Format
+
+```
+name <email> (website)
+```
+
+- The `name` describes the name or username of the author. It is required.
+- The `email` describes the email address of the author. It must be enclosed in horizontal carets.
+It is not required.
+- The `website` describes the website or page of the author. It must be enclosed in parentheses.
+It is not required.
+
+Only the `name` is required. If other elements are given, they must be in the order of: name, email
+if it is given, and website if it is given.
 
 #### Example
 
@@ -89,6 +108,12 @@ the license file.
   "dependencies": [
     ["org.other-example", "other-package", "0.5.6"],
     ["com.example-three", "yet-another-package", "2.4.0"]
+  ],
+  "authors": [
+    "My Organization <contact@example.com> (http://example.com)",
+    "A Fake Person (http://example-web.org)",
+    "Another Fake Person <fakeemail@example.org>",
+    "Just a Fake Person"
   ],
   "license": "MIT"
 }
