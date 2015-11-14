@@ -1,0 +1,26 @@
+{
+  "id": "my-package",
+  "group": "com.example",
+  "version": "2.3.0",
+  "title": "My Package",
+  "description": "An example craft.json file that shows how craft.json is used.",
+  "links": {
+    "homepage": "https://example.com/my-package",
+    "issues": "https://github.com/example-owner/my-package/issues",
+    "sources": "https://github.com/example-owner/my-package"
+  },
+  "dependencies": [
+    ["org.other-example", "other-package", "0.5.6"],
+    ["com.example-three", "yet-another-package", "2.4.0"]
+  ],
+  "authors": [
+    "My Organization <contact@example.com> (http://example.com)",
+    "A Fake Person (http://example-web.org)",
+    "Another Fake Person <fakeemail@example.org>",
+    "Just a Fake Person"
+  ],
+  "contributors": [
+    "Just a Fake Contributor"
+  ],
+  "license": "MIT"
+}

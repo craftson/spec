@@ -31,16 +31,6 @@ recommended to use [semver](http://semver.org/) for describing versions (in orde
 to be easily compared and ordered), but it is not necessary. A version could also be an incrementing
 build number.
 
-#### Example
-
-```js
-{
-  "id": "my-package",
-  "group": "com.example",
-  "version": "2.3.0"
-}
-```
-
 ### Optional Fields in a Package Object
 
 - `"title"` - String. A short, human-readable name. How the project is referred to in speech or
@@ -94,55 +84,18 @@ It is not required.
 Only the `name` is required. If other elements are given, they must be in the order of: name, email
 if it is given, and website if it is given.
 
-#### Example
-
-```js
-{
-  "title": "My Package",
-  "description": "An example craft.json file that shows how craft.json is used.",
-  "links": {
-    "homepage": "https://example.com/my-package",
-    "issues": "https://github.com/example-owner/my-package/issues",
-    "sources": "https://github.com/example-owner/my-package"
-  },
-  "dependencies": [
-    ["org.other-example", "other-package", "0.5.6"],
-    ["com.example-three", "yet-another-package", "2.4.0"]
-  ],
-  "authors": [
-    "My Organization <contact@example.com> (http://example.com)",
-    "A Fake Person (http://example-web.org)",
-    "Another Fake Person <fakeemail@example.org>",
-    "Just a Fake Person"
-  ],
-  "contributors": [
-    "Just a Fake Contributor"
-  ],
-  "license": "MIT"
-}
-```
-
 ### Specifying Multiple Packages
 
 Specify multiple packages by using an array at the root of the craft.json file. Each object inside
 the array must be a package object, and follow the package object format. There is no limit to the
 number of package objects that may be within the array.
 
-#### Example
+## Examples
 
-```js
-[
-  {
-    "id": "package-one",
-    "group": "com.example",
-    "version": "2.3.0",
-    "license": "MIT"
-  },
-  {
-    "id": "package-other",
-    "group": "org.my-group",
-    "version": "0.0.1",
-    "description": "Another package"
-  }
-]
-```
+Several examples are listed within this repository:
+
+- https://github.com/craftson/spec/blob/master/examples/craft.json is an example of a craft.json
+file with all fields specified.
+
+- https://github.com/craftson/spec/blob/master/examples/multiple-craft.json is an example of a
+craft.json file that describes multiple packages.

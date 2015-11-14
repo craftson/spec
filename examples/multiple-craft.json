@@ -1,0 +1,14 @@
+[
+  {
+    "id": "package-one",
+    "group": "com.example",
+    "version": "2.3.0",
+    "license": "MIT"
+  },
+  {
+    "id": "package-other",
+    "group": "org.my-group",
+    "version": "0.0.1",
+    "description": "Another package"
+  }
+]
