@@ -8,11 +8,11 @@ all rely on distributing packages in JARs with some sort of description file. Th
 by the modding platforms themselves, as well as other systems that deal with the distribution,
 storage, or management of packages. craft.json is a platform-neutral description file for
 Minecraft packages that unifies these efforts. It is designed to be simple to read, simple to
-create, and simple to consume.
+create, and simple to consume, and is under 1000 words.
 
 ## Specification
-As by the name, craft.json is a [JSON](http://json.org/) file. It is located in the root of an
-archive file, most commonly JAR or ZIP. The root of the file is often a JSON object, called the
+craft.json is a [JSON](http://json.org/) file. It is located in the root of an archive file, most
+commonly a JAR or ZIP file. The root of the file is often a JSON object, called the
 _package object_. The package object describes the package within the archive file. Several fields
 in the package object format are required, and most are optional.
 
