@@ -16,7 +16,7 @@ archive file, most commonly JAR or ZIP. The root of the file is often a JSON obj
 _package object_. The package object describes the package within the archive file. Several fields
 in the package object format are required, and most are optional.
 
-### Required Fields in the Package Object
+### Required Fields in a Package Object
 
 - `"id"` - String. The machine-readable name of the package. Must be an alphanumeric string
 including dashes and underscores, without spaces. In other words, must match the regex
@@ -41,7 +41,7 @@ build number.
 }
 ```
 
-### Optional Fields in the Package Object
+### Optional Fields in a Package Object
 
 - `"title"` - String. A short, human-readable name. How the project is referred to in speech or
 text. There are no restrictions on length; but it is recommended to keep the title under 50
