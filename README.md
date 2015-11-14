@@ -115,6 +115,9 @@ if it is given, and website if it is given.
     "Another Fake Person <fakeemail@example.org>",
     "Just a Fake Person"
   ],
+  "contributors": [
+    "Just a Fake Contributor"
+  ],
   "license": "MIT"
 }
 ```
