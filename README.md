@@ -61,11 +61,15 @@ to associate with the package:
   control repository, such as a git repository.
 
 - `"dependencies"` - Array of arrays. Describes the dependencies on other packages. Each element in
-the dependencies array describes a different package dependency. Each individual dependency is an
-array of strings, containing the group, id, and version of that dependency, in that order. The
-version of a dependency may be excluded, indicating that any version of that dependency is
-compatible with the package. Absence of the `"dependencies"` key implies that the package has no
-dependencies.
+the dependencies array describes a different package dependency. Absence of the `"dependencies"` key
+implies that the package has no dependencies.
+
+  Each individual dependency is an
+  array of strings, containing the group, id, and version of that dependency, in that order. The
+  version of a dependency may be excluded, indicating that any version of that dependency is
+  compatible with the package.
+
+- `"authors"` - Array of strings.
 
 - `"license"` - String. The license that files in the package are under. Must be either a license
 identifier from https://spdx.org/licenses/ or a link to a webpage that describes the license, like
