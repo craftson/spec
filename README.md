@@ -2,11 +2,11 @@
 
 ## Rationale
 Every Minecraft modding platform has designed some sort of way for packages (plugins or mods) to
-bundle information when they are distributed. Forge has mcmod.info, Sponge has the `@Plugin`
-annotation, and Bukkit and Spigot have plugin.yml. While the individual systems are different, they
+bundle information when they are distributed. Forge has `mcmod.info`, Sponge has the `@Plugin`
+annotation, and Bukkit and Spigot have `plugin.yml`. While the individual systems are different, they
 all rely on distributing packages in JARs with some sort of description file. This file is consumed
 by the modding platforms themselves, as well as other systems that deal with the distribution,
-storage, or management of packages. craft.json is a platform-neutral description file for
+storage, or management of packages. `craft.json` is a platform-neutral description file for
 Minecraft packages that unifies these efforts. It is designed to be simple to read, simple to
 create, and simple to consume, and is under 1000 words.
 
